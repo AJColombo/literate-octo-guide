@@ -13,7 +13,7 @@ public class TopDownToFromObject : MonoBehaviour
         GameObject PlayerObject = col.gameObject;
         if (PlayerObject.name == "MainPlayer") {
             PlayerObject.GetComponent<Rigidbody2D>().gravityScale = 1.0f;
-            Movement3_29_2Number2 MoveScriptVar = PlayerObject.GetComponent<Movement3_29_2Number2>();
+            MainMovement MoveScriptVar = PlayerObject.GetComponent<MainMovement>();
             MoveScriptVar.SwapPlayerPerspective();
             //PlayerObject.GetComponent(Movement3_29_23).PlayerControlStyle = 1;
         }
