@@ -14,6 +14,7 @@ public class Movement3_29_2Number2 : MonoBehaviour
 		TopDown = 0,
 		SideScroll = 1
 	}
+	private bool redDoorAccess = false;
 	private bool isFacingRight = true;
 	[SerializeField] private Transform groundCheck;
     [SerializeField] private LayerMask groundLayer;
@@ -24,6 +25,8 @@ public class Movement3_29_2Number2 : MonoBehaviour
     void Start()
     {
         PlayerControlStyle = PlayerMovementStyle.TopDown;
+		redDoorAccess = false;
+		
     }
 
     // Update is called once per frame
@@ -91,6 +94,14 @@ public class Movement3_29_2Number2 : MonoBehaviour
             transform.localScale = localScale;
         }
     }
+	
+	public void setRedDoorToTrue() {
+		redDoorAccess = true;
+	}
+	
+	public bool getRedDoorAccess() {
+		return redDoorAccess;
+	}
 
 	public void SwapPlayerPerspective() {
 		if (PlayerControlStyle == PlayerMovementStyle.TopDown) {
