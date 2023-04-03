@@ -98543,6 +98543,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   doorLocked: 0
+  isOpen: 0
+  closedX: 0
+  closedY: 0
+  player: {fileID: 314846134}
 --- !u!1 &2027734813
 GameObject:
   m_ObjectHideFlags: 0
