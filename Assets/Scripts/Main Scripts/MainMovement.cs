@@ -19,7 +19,7 @@ public class MainMovement : MonoBehaviour
 	private bool isFacingRight = true;
 	[SerializeField] private Transform groundCheck;
     [SerializeField] private LayerMask groundLayer;
-	public PlayerMovementStyle PlayerControlStyle = PlayerMovementStyle.TopDown;
+	public PlayerMovementStyle PlayerControlStyle;
 
 
     // Start is called before the first frame update
@@ -38,6 +38,7 @@ public class MainMovement : MonoBehaviour
 		} else {
 			ProcessSideScrollInput();
 		}
+		Debug.Log(ObjectsRidigdbody.velocity.y);
 		
 	}
     void FixedUpdate() {
@@ -58,8 +59,9 @@ public class MainMovement : MonoBehaviour
 	void ProcessSideScrollInput() {
 		horizonalMove = Input.GetAxisRaw("Horizontal");
 
-        if (Input.GetButtonDown("Jump") && IsGrounded())
+        if (Input.GetButtonDown("Jump") && (ObjectsRidigdbody.velocity.y < 1.0f && ObjectsRidigdbody.velocity.y > -1.0f) )
         {
+			Debug.Log("WAS GROUNDED");
             ObjectsRidigdbody.velocity = new Vector2(ObjectsRidigdbody.velocity.x, jumpingPower);
         }
 
@@ -81,7 +83,9 @@ public class MainMovement : MonoBehaviour
 
 	private bool IsGrounded()
     {
-        return Physics2D.OverlapCircle(groundCheck.position, 0.2f, groundLayer);
+		
+        return Physics2D.OverlapCircle(groundCheck.position, 0.00005f, groundLayer);
+		
     }
 
 

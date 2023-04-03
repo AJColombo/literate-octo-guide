@@ -16,10 +16,12 @@ public class KeyScript : MonoBehaviour
 			MainMovement MoveScriptVar = collision.gameObject.GetComponent<MainMovement>();
 			if (ThisCardsAccess == KeyAccess.FirstRed) {
 				MoveScriptVar.setRedDoorToTrue();
-			} else if (ThisCardsAccess == KeyAccess.SecondGreen) {
-				Debug.Log("ADD GREEN DOOR");
+				Destroy(gameObject);
+			} if (ThisCardsAccess == KeyAccess.SecondGreen) {
+				MoveScriptVar.setGreenDoorToTrue();
 			}
 		}
 	}
 	
 }
+
