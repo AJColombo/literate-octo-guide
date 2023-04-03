@@ -15,6 +15,7 @@ public class MainMovement : MonoBehaviour
 		SideScroll = 1
 	}
 	private bool redDoorAccess = false;
+	private bool greenDoorAccess = false;
 	private bool isFacingRight = true;
 	[SerializeField] private Transform groundCheck;
     [SerializeField] private LayerMask groundLayer;
@@ -26,6 +27,7 @@ public class MainMovement : MonoBehaviour
     {
         PlayerControlStyle = PlayerMovementStyle.TopDown;
 		redDoorAccess = false;
+		greenDoorAccess = false;
 		
     }
 
@@ -101,6 +103,13 @@ public class MainMovement : MonoBehaviour
 	
 	public bool getRedDoorAccess() {
 		return redDoorAccess;
+	}
+	public void setGreenDoorToTrue() {
+		greenDoorAccess = true;
+	}
+	
+	public bool getGreenDoorAccess() {
+		return greenDoorAccess;
 	}
 
 	public void SwapPlayerPerspective() {
