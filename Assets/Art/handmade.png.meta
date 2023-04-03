@@ -4,19 +4,19 @@ TextureImporter:
   internalIDToNameTable:
   - first:
       213: -3561536656987382940
-    second: handmade_0
+    second: HospitalBedTile
   - first:
       213: 6299658613985613642
-    second: handmade_1
+    second: 02 TankFull
   - first:
       213: 4454491128168319993
-    second: handmade_2
+    second: BunkBedTile
   - first:
       213: -2244712693092678062
-    second: handmade_3
+    second: RecycleTile
   - first:
       213: 7170386420964398186
-    second: handmade_4
+    second: IV Tile
   - first:
       213: 8961899869977434535
     second: handmade_5
@@ -25,19 +25,19 @@ TextureImporter:
     second: handmade_6
   - first:
       213: -4617541780298237187
-    second: handmade_7
+    second: TrashCanTile
   - first:
       213: -7413709760528335936
-    second: handmade_8
+    second: MedicalTrashCan
   - first:
       213: -4054871213499428209
-    second: handmade_9
+    second: Engine1Tile
   - first:
       213: -4586915185321156152
-    second: handmade_10
+    second: Engine2Tile
   - first:
       213: 4439105152619652118
-    second: handmade_11
+    second: Engine3Tile
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -127,13 +127,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: handmade_0
+      name: HospitalBedTile
       rect:
         serializedVersion: 2
-        x: 1
-        y: 36
-        width: 9
-        height: 26
+        x: 11
+        y: 34
+        width: 18
+        height: 28
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -148,13 +148,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: handmade_1
+      name: 02 TankFull
       rect:
         serializedVersion: 2
-        x: 11
-        y: 34
-        width: 18
-        height: 28
+        x: 31
+        y: 44
+        width: 8
+        height: 19
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -169,13 +169,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: handmade_2
+      name: BunkBedTile
       rect:
         serializedVersion: 2
-        x: 31
-        y: 44
-        width: 8
-        height: 19
+        x: 2
+        y: 2
+        width: 27
+        height: 26
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -190,15 +190,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: handmade_3
+      name: RecycleTile
       rect:
         serializedVersion: 2
-        x: 40
-        y: 44
-        width: 8
-        height: 19
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 30
+        y: 28
+        width: 9
+        height: 14
+      alignment: 9
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -211,15 +211,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: handmade_4
+      name: IV Tile
       rect:
         serializedVersion: 2
-        x: 49
-        y: 44
-        width: 8
-        height: 19
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 1
+        y: 36
+        width: 9
+        height: 26
+      alignment: 9
+      pivot: {x: 0.35517, y: 1.1879368}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -235,12 +235,12 @@ TextureImporter:
       name: handmade_5
       rect:
         serializedVersion: 2
-        x: 30
-        y: 28
-        width: 9
-        height: 14
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 40
+        y: 44
+        width: 8
+        height: 19
+      alignment: 9
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -256,12 +256,12 @@ TextureImporter:
       name: handmade_6
       rect:
         serializedVersion: 2
-        x: 40
-        y: 28
-        width: 9
-        height: 15
+        x: 49
+        y: 45
+        width: 8
+        height: 18
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -274,15 +274,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: handmade_7
+      name: TrashCanTile
       rect:
         serializedVersion: 2
-        x: 50
+        x: 40
         y: 28
-        width: 8
+        width: 9
         height: 15
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -295,15 +295,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: handmade_8
+      name: MedicalTrashCan
       rect:
         serializedVersion: 2
-        x: 2
-        y: 2
-        width: 27
-        height: 26
+        x: 50
+        y: 28
+        width: 8
+        height: 15
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -316,15 +316,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: handmade_9
+      name: Engine1Tile
       rect:
         serializedVersion: 2
-        x: 37
-        y: 15
-        width: 27
+        x: 30
+        y: 2
+        width: 13
         height: 12
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -337,15 +337,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: handmade_10
+      name: Engine2Tile
       rect:
         serializedVersion: 2
-        x: 30
-        y: 2
-        width: 13
+        x: 37
+        y: 15
+        width: 27
         height: 12
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -358,7 +358,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: handmade_11
+      name: Engine3Tile
       rect:
         serializedVersion: 2
         x: 44
@@ -366,7 +366,7 @@ TextureImporter:
         width: 20
         height: 12
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
