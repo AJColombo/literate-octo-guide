@@ -526,6 +526,7 @@ MonoBehaviour:
 
 
 
+
     Asset Maker
 
 
@@ -625,10 +626,10 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: "AJ Colombo\nIgnacio Flores\nLogan Wongbangchuad\n\nAJ Colombo\nIgnacio
-    Flores\n\nAJ Colombo\n\nAJ Colombo\n\nDALL\xB7E - A.I. generated images\nMatt
-    Walkden - Space Runner Assets\nAdam Saltsman - Caves of Gallet\nJonik9i - Free
-    Space Space Station Game Asset\nFoozleCC - Sci-Fi Lab\n\n\nWyatt McWilliams for
-    Unity and GIMP"
+    Flores\nLogan Wongbangchuad\n\nAJ Colombo\n\nAJ Colombo\n\nDALL\xB7E - A.I. generated
+    images\nMatt Walkden - Space Runner Assets\nAdam Saltsman - Caves of Gallet\nJonik9i
+    - Free Space Space Station Game Asset\nFoozleCC - Sci-Fi Lab\n\n\nWyatt McWilliams
+    for Unity and GIMP"
 --- !u!222 &1763974057
 CanvasRenderer:
   m_ObjectHideFlags: 0

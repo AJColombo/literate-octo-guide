@@ -33,7 +33,7 @@ public class Door : MonoBehaviour
 			//Destroy(gameObject);
 			//if door is closed and player is in proximity open the door
 			if (player.CompareTag("Player")) {
-				if (DoorColor == WhichDoor.Red && isOpen == false && (Vector3.Distance(new Vector3(closedX, closedY/2f, 0f), player.transform.position) < 1.25f)) {
+				if (DoorColor == WhichDoor.Red && isOpen == false && (Vector3.Distance(new Vector3(closedX, closedY, 0f), player.transform.position) < 1.25f)) {
 					Debug.Log("TET");
 					isOpen = true;
 					transform.position = new Vector3(closedX, closedY + 2.5f, 0f);
@@ -44,7 +44,7 @@ public class Door : MonoBehaviour
 			//Destroy(gameObject);
 			//if door is closed and player is in proximity open the door
 			if (player.CompareTag("Player")) {
-				if (DoorColor == WhichDoor.Green && isOpen == false && (Vector3.Distance(new Vector3(closedX, closedY/2f, 0f), player.transform.position) < 1.25f)) {
+				if (DoorColor == WhichDoor.Green && isOpen == false && (Vector3.Distance(new Vector3(closedX, closedY, 0f), player.transform.position) < 1.25f)) {
 					Debug.Log("TET");
 					isOpen = true;
 					transform.position = new Vector3(closedX, closedY + 2.5f, 0f);
@@ -52,7 +52,6 @@ public class Door : MonoBehaviour
 			}
         }
     }
-	
 	
 	private void OnTriggerEnter2D(Collider2D collision) {
 		if (collision.CompareTag("Player")) {

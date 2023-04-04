@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class WarpScript : MonoBehaviour
 {
 	public string NameOfLevel;
-	
+	public GameObject player;
 	
     //private string[] LevelsStringNames = {"MainMenu", "MainLevel_4_2 1", "storageRoomSideScroll", "Credits"};
 	//public Levels SelectedLevel; 
@@ -19,8 +19,10 @@ public class WarpScript : MonoBehaviour
 	
 	private void OnTriggerEnter2D(Collider2D collision) {
 		if (collision.CompareTag("Player")) {
-		SceneManager.LoadScene(NameOfLevel);
-			Debug.Log("PLAYER PASSED");
+			if (player.CompareTag("Player")) {
+				SceneManager.LoadScene(NameOfLevel);
+				//	Debug.Log("PLAYER PASSED");
+			}
 		}
 	}
 }
