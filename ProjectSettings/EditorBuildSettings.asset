@@ -12,9 +12,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Main SceneProducction 1/MainLevel.unity
     guid: 61f12a09b030eaa4eafe9bf89b720664
   - enabled: 1
-    path: Assets/Scenes/Main SceneProducction 1/storageRoomSideScroll.unity
-    guid: 430532b0c5a5c29418d711e0fa046358
-  - enabled: 1
     path: Assets/Scenes/Main SceneProducction 1/Credits.unity
     guid: 5f04343f32fa5aa4d8d5dc3960276f8c
+  - enabled: 1
+    path: Assets/Scenes/AJ Scenes/storageRoomSideScroll 2.unity
+    guid: ed78d7a3bf73b1f4caa74273a5c2e0f2
   m_configObjects: {}

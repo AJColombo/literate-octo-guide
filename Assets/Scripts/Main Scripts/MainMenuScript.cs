@@ -10,7 +10,7 @@ public class MainMenuScript : MonoBehaviour
     }
 	
 	public void Credits() {
-    //    SceneManager.LoadScene("Credits");
+        SceneManager.LoadScene("Credits");
     }
 
     public void Quit() {

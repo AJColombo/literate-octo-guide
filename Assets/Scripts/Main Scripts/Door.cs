@@ -8,6 +8,7 @@ public class Door : MonoBehaviour
 	public bool redLocked = true;
 	public bool greenLocked = true;
 	public bool isOpen = false;
+	public bool isVerticle;
 	private float closedX;
 	private float closedY;
 	public GameObject player;
@@ -36,7 +37,11 @@ public class Door : MonoBehaviour
 				if (DoorColor == WhichDoor.Red && isOpen == false && (Vector3.Distance(new Vector3(closedX, closedY, 0f), player.transform.position) < 1.25f)) {
 					Debug.Log("TET");
 					isOpen = true;
-					transform.position = new Vector3(closedX, closedY + 2.5f, 0f);
+					if(isVerticle == true) {
+						transform.position = new Vector3(closedX, closedY + 2.5f, 0f);
+					} else {
+						transform.position = new Vector3(closedX + 1.8f, closedY, 0f);
+					}
 				}
 			}
         }

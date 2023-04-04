@@ -110219,7 +110219,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b027a8f7c315b14da49624732f60b73, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  NameOfLevel: storageRoomSideScroll
+  NameOfLevel: storageRoomSideScroll1
   player: {fileID: 1926503727}
 --- !u!4 &2029723729 stripped
 Transform:

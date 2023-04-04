@@ -15,7 +15,7 @@ public class MainMovement : MonoBehaviour
 		SideScroll = 1
 	}
 	public bool redDoorAccess = false;
-	private bool greenDoorAccess = false;
+	public bool greenDoorAccess = false;
 	private bool isFacingRight = true;
 	[SerializeField] private Transform groundCheck;
     [SerializeField] private LayerMask groundLayer;
