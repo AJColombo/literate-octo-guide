@@ -5,16 +5,23 @@ using UnityEngine;
 public class Door : MonoBehaviour
 {
 	
-	public bool doorLocked = true;
+	public bool redLocked = true;
+	public bool greenLocked = true;
 	public bool isOpen = false;
 	private float closedX;
 	private float closedY;
 	public GameObject player;
+	public WhichDoor DoorColor;
+	public enum WhichDoor {
+		Red = 0,
+		Green = 1
+	}
 	
     // Start is called before the first frame update
     void Start()
     {
-        doorLocked = true;
+        redLocked = true;
+		greenLocked = true;
 		closedX = transform.position.x;
 	    closedY = transform.position.y;
     }
@@ -22,14 +29,25 @@ public class Door : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-		if (doorLocked == false) {
+		if (redLocked == false) {
 			//Destroy(gameObject);
 			//if door is closed and player is in proximity open the door
 			if (player.CompareTag("Player")) {
-				if (isOpen == false && (Vector3.Distance(new Vector3(closedX, closedY/2f, 0f), player.transform.position) < 1.25f)) {
+				if (DoorColor == WhichDoor.Red && isOpen == false && (Vector3.Distance(new Vector3(closedX, closedY/2f, 0f), player.transform.position) < 1.25f)) {
 					Debug.Log("TET");
 					isOpen = true;
-					transform.position = transform.position + new Vector3(0f, 3.5f, 0f);
+					transform.position = new Vector3(closedX, closedY + 2.5f, 0f);
+				}
+			}
+        }
+		if (greenLocked == false) {
+			//Destroy(gameObject);
+			//if door is closed and player is in proximity open the door
+			if (player.CompareTag("Player")) {
+				if (DoorColor == WhichDoor.Green && isOpen == false && (Vector3.Distance(new Vector3(closedX, closedY/2f, 0f), player.transform.position) < 1.25f)) {
+					Debug.Log("TET");
+					isOpen = true;
+					transform.position = new Vector3(closedX, closedY + 2.5f, 0f);
 				}
 			}
         }
@@ -40,8 +58,10 @@ public class Door : MonoBehaviour
 		if (collision.CompareTag("Player")) {
 			MainMovement MoveScriptVar = collision.gameObject.GetComponent<MainMovement>();
 			if (MoveScriptVar.getRedDoorAccess() == true) {
-				
-				doorLocked = false;
+				redLocked = false;
+			}
+			if (MoveScriptVar.getGreenDoorAccess() == true) {
+				greenLocked = false;
 			}
 		}
 	}
