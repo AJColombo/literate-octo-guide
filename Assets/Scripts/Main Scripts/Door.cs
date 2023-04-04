@@ -7,8 +7,8 @@ public class Door : MonoBehaviour
 	
 	public bool doorLocked = true;
 	public bool isOpen = false;
-	public float closedX;
-	public float closedY;
+	private float closedX;
+	private float closedY;
 	public GameObject player;
 	
     // Start is called before the first frame update
@@ -27,6 +27,7 @@ public class Door : MonoBehaviour
 			//if door is closed and player is in proximity open the door
 			if (player.CompareTag("Player")) {
 				if (isOpen == false && (Vector3.Distance(new Vector3(closedX, closedY/2f, 0f), player.transform.position) < 1.25f)) {
+					Debug.Log("TET");
 					isOpen = true;
 					transform.position = transform.position + new Vector3(0f, 3.5f, 0f);
 				}

@@ -9,12 +9,12 @@ public class MainMovement : MonoBehaviour
 	private float horizonalMove;
 	public Rigidbody2D  ObjectsRidigdbody;
 	private Vector2 moveDirection;
-	private float jumpingPower = 16f;
+	public float jumpingPower = 16f;
 	public enum PlayerMovementStyle {
 		TopDown = 0,
 		SideScroll = 1
 	}
-	private bool redDoorAccess = false;
+	public bool redDoorAccess = false;
 	private bool greenDoorAccess = false;
 	private bool isFacingRight = true;
 	[SerializeField] private Transform groundCheck;
@@ -23,9 +23,7 @@ public class MainMovement : MonoBehaviour
 
 
     // Start is called before the first frame update
-    void Start()
-    {
-        PlayerControlStyle = PlayerMovementStyle.TopDown;
+    void Start() {
 		redDoorAccess = false;
 		greenDoorAccess = false;
 		
@@ -35,10 +33,12 @@ public class MainMovement : MonoBehaviour
 	void Update() {
 		if (PlayerControlStyle == PlayerMovementStyle.TopDown) {
 			ProcessTopDownInputs();
+			ObjectsRidigdbody.gravityScale = 0.0f;
 		} else {
 			ProcessSideScrollInput();
+			ObjectsRidigdbody.gravityScale = 2.0f;
 		}
-		Debug.Log(ObjectsRidigdbody.velocity.y);
+		//Debug.Log(ObjectsRidigdbody.velocity.y);
 		
 	}
     void FixedUpdate() {
