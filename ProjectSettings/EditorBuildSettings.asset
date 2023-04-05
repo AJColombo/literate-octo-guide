@@ -18,7 +18,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Main SceneProducction 1/storageRoomSideScroll.unity
     guid: 73d2afc20a6431749a2dea466a39f1b6
   - enabled: 1
-    path: Assets/Scenes/Main SceneProducction 1/MainLevel2.unity
+    path: Assets/Scenes/MainLevel2.unity
     guid: fac623aac15b335479e8a5483ceba508
   - enabled: 1
     path: Assets/Scenes/Main SceneProducction 1/MazeScene 1.unity
