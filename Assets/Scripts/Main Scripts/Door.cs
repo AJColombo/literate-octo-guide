@@ -72,7 +72,7 @@ public class Door : MonoBehaviour
 					if(isVerticle == true) {
 						transform.position = new Vector3(closedX, closedY + 2.5f, 0f);
 					} else {
-						transform.position = new Vector3(closedX - 1.8f, closedY, 0f);
+						transform.position = new Vector3(closedX + 4.8f, closedY, 0f);
 					}
 				}
 			}
