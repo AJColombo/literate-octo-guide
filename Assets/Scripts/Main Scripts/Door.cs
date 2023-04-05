@@ -40,7 +40,7 @@ public class Door : MonoBehaviour
 					if(isVerticle == true) {
 						transform.position = new Vector3(closedX, closedY + 2.5f, 0f);
 					} else {
-						transform.position = new Vector3(closedX + 1.8f, closedY, 0f);
+						transform.position = new Vector3(closedX - 1.8f, closedY, 0f);
 					}
 				}
 			}
@@ -52,7 +52,11 @@ public class Door : MonoBehaviour
 				if (DoorColor == WhichDoor.Green && isOpen == false && (Vector3.Distance(new Vector3(closedX, closedY, 0f), player.transform.position) < 1.25f)) {
 					Debug.Log("TET");
 					isOpen = true;
-					transform.position = new Vector3(closedX, closedY + 2.5f, 0f);
+					if(isVerticle == true) {
+						transform.position = new Vector3(closedX, closedY + 2.5f, 0f);
+					} else {
+						transform.position = new Vector3(closedX - 1.8f, closedY, 0f);
+					}
 				}
 			}
         }
