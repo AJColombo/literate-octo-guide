@@ -7,6 +7,7 @@ public class Door : MonoBehaviour
 	
 	public bool redLocked = true;
 	public bool greenLocked = true;
+	public bool blueLocked = true;
 	public bool isOpen = false;
 	public bool isVerticle;
 	private float closedX;
@@ -15,7 +16,8 @@ public class Door : MonoBehaviour
 	public WhichDoor DoorColor;
 	public enum WhichDoor {
 		Red = 0,
-		Green = 1
+		Green = 1,
+		Blue = 2
 	}
 	
     // Start is called before the first frame update
@@ -60,6 +62,21 @@ public class Door : MonoBehaviour
 				}
 			}
         }
+		if (blueLocked == false) {
+			//Destroy(gameObject);
+			//if door is closed and player is in proximity open the door
+			if (player.CompareTag("Player")) {
+				if (DoorColor == WhichDoor.Blue && isOpen == false && (Vector3.Distance(new Vector3(closedX, closedY, 0f), player.transform.position) < 1.25f)) {
+					Debug.Log("TET");
+					isOpen = true;
+					if(isVerticle == true) {
+						transform.position = new Vector3(closedX, closedY + 2.5f, 0f);
+					} else {
+						transform.position = new Vector3(closedX - 1.8f, closedY, 0f);
+					}
+				}
+			}
+        }
     }
 	
 	private void OnTriggerEnter2D(Collider2D collision) {
@@ -70,6 +87,9 @@ public class Door : MonoBehaviour
 			}
 			if (MoveScriptVar.getGreenDoorAccess() == true) {
 				greenLocked = false;
+			}
+			if (MoveScriptVar.getBlueDoorAccess() == true) {
+				blueLocked = false;
 			}
 		}
 	}

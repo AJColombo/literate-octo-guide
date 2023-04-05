@@ -16,6 +16,7 @@ public class MainMovement : MonoBehaviour
 	}
 	public bool redDoorAccess = false;
 	public bool greenDoorAccess = false;
+	public bool blueDoorAccess = false;
 	private bool isFacingRight = true;
 	[SerializeField] private Transform groundCheck;
     [SerializeField] private LayerMask groundLayer;
@@ -26,7 +27,7 @@ public class MainMovement : MonoBehaviour
     void Start() {
 		redDoorAccess = false;
 		greenDoorAccess = false;
-		
+		blueDoorAccess = false;
     }
 
     // Update is called once per frame
@@ -87,9 +88,7 @@ public class MainMovement : MonoBehaviour
         return Physics2D.OverlapCircle(groundCheck.position, 0.00005f, groundLayer);
 		
     }
-
-
-
+	
 	private void Flip()
     {
         if (isFacingRight && horizonalMove < 0f || !isFacingRight && horizonalMove > 0f)
@@ -104,16 +103,20 @@ public class MainMovement : MonoBehaviour
 	public void setRedDoorToTrue() {
 		redDoorAccess = true;
 	}
-	
 	public bool getRedDoorAccess() {
 		return redDoorAccess;
 	}
 	public void setGreenDoorToTrue() {
 		greenDoorAccess = true;
 	}
-	
 	public bool getGreenDoorAccess() {
 		return greenDoorAccess;
+	}
+	public void setBlueDoorToTrue() {
+		blueDoorAccess = true;
+	}
+	public bool getBlueDoorAccess() {
+		return blueDoorAccess;
 	}
 
 	public void SwapPlayerPerspective() {

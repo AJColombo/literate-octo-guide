@@ -7,7 +7,8 @@ public class KeyScript : MonoBehaviour
 	public KeyAccess ThisCardsAccess; 
 	public enum KeyAccess {
 		FirstRed = 0,
-		SecondGreen = 1
+		SecondGreen = 1,
+		ThirdBlue = 2
 	}
 	
 	
@@ -21,6 +22,10 @@ public class KeyScript : MonoBehaviour
 			} if (ThisCardsAccess == KeyAccess.SecondGreen) {
 				MoveScriptVar.setGreenDoorToTrue();
 				Debug.Log("DESTORY Green KEy");
+				Destroy(gameObject);
+			} if (ThisCardsAccess == KeyAccess.ThirdBlue) {
+				MoveScriptVar.setBlueDoorToTrue();
+				Debug.Log("DESTORY Blue KEy");
 				Destroy(gameObject);
 			}
 		}
